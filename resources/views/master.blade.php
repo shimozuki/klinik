@@ -93,7 +93,7 @@
       </li>
       @endif
               <!-- Nav Item - Lab Collapse Menu -->
-      @if (Auth::user()->admin == 1 || Auth::user()->admin == 0)
+      @if (Auth::user()->admin == 1 || Auth::user()->admin == 2)
       <li class="nav-item {{ set_menu(['obat', 'obat.tambah', 'obat.edit']) }}">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-prescription-bottle-alt"></i>
@@ -109,7 +109,7 @@
       </li>
       @endif
         <!-- Nav Item - RM Collapse Menu -->
-        @if (Auth::user()->admin == 1 || Auth::user()->admin == 2)
+        @if (Auth::user()->admin == 1 || Auth::user()->admin == 0)
       <li class="nav-item {{ set_menu(['rm', 'rm.tambah', 'rm.edit','rm.list','rm.lihat','rm.tambah.id','tagihan']) }}">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-file-signature"></i>
