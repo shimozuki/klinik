@@ -126,7 +126,6 @@
 
       <!-- Divider -->
       <hr class="sidebar-divider">
-      @if (Auth::user()->admin == 1)
       <!-- Heading -->
       <div class="sidebar-heading">
         Menu Tambahan
