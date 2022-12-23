@@ -80,7 +80,10 @@ class RegisterController extends Controller
         
         if ($data['profesi'] == 'Staff') {
             $admin = 2;
-        }else{
+        }elseif ($data['profesi'] == 'Administrasi') {
+            $admin = 3;
+        }
+        else{
             $admin = $data['admin'];
         }
         return User::create([

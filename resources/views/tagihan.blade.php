@@ -115,7 +115,7 @@
                                     <span class="icon"><i class="fa  fa-arrow-left" ></i></span><span class="text"> Kembali</span></a>
                                 </div>
                                 <div class="col-sm-6">
-                                    <a href="javascript:;" data-toggle="modal" onclick="print()" data-target="#DeleteModal" class="btn btn-primary btn-block">
+                                    <a href="javascript:;" data-toggle="modal" onclick="window.print()" data-target="#DeleteModal" class="btn btn-primary btn-block">
                                     <span class="icon"><i class="fa  fa-print" ></i></span><span class="text"> Cetak</span></a>
                                 </div>
 
@@ -132,10 +132,6 @@
     lengthMenu: [[5, 10, 20, -1], [5, 10, 20, 'Todos']]
   } )
 } );
-
-function print() {
-    $('#print').printThis();
-}
     </script>
 
 @endsection

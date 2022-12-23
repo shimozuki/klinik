@@ -98,12 +98,6 @@
                       @endif
                       </td>
                       <td width="120px">
-                        <a href="{{route('rm.edit', $rm->id)}}" class="btn btn-warning btn-sm btn-icon-split">
-                        <span class="icon">
-                        <i style="padding-top:4px"class="fas fa-pen"></i>
-                        </span>
-                        <span class="text">Edit</span>
-                        </a>
                         <a href="{{route('rm.lihat', $rm->id)}}" class="btn btn-success btn-sm btn-icon-split">
                         <span class="icon">
                         <i style="padding-top:4px"class="fas fa-eye"></i>
