@@ -32,7 +32,7 @@
                         </div>
                         <div class="form-group row">
                           <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="text" class="form-control " name="Pekerjaan" placeholder="Pekerjaan">
+                            <input type="text" class="form-control " name="tensi" placeholder="Tensi">
                           </div>
                           <div class="col-sm-6">
                             <input type="text" class="form-control " name="no_handphone" placeholder="Nomer Handphone">
@@ -40,13 +40,12 @@
                         </div>
                         <div class="form-group row">
                           <div class="col-sm-6 mb-3 mb-sm-0">
-                            <select class="form-control " name="Pendidikan_terakhir" placeholder="Pendidikan terakhir">
-                                <option value="" selected disabled>Pendidikan Terakhir</option>
-                                <option value="Tidak Ssekolah">Tidak Sekolah</option>
-                                <option value="SD">SD</option>
-                                <option value="SMP">SMP</option>
-                                <option value="SMA">SMA</option>
-                                <option value="Perguruan Tinggi">Perguruan Tinggi</option>
+                            <select class="form-control " name="gol_darah" placeholder="Golongan Darah">
+                                <option value="" selected disabled>Golongan Darah</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="AB">AB</option>
+                                <option value="O">O</option>
                             </select>    
                           </div>
                           <div class="col-sm-6">
@@ -58,8 +57,11 @@
                             </select>
                           </div>
                         </div>
-                            <div class="form-group">
+                        <div class="form-group">
                                 <input type="text" class="form-control " name="no_bpjs" placeholder="Nomer BPJS (Tidak Wajib)">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control " name="berat_badan" placeholder="Berat Badan">
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control " name="alergi" placeholder="Daftar Alergi (Tidak Wajib)"></textarea>
