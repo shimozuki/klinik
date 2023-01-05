@@ -92,11 +92,13 @@
             <div class="col-xl-8 col-lg-7">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
+                @if(Auth::user()->admin == 1 || Auth::user()->admin == 2 )
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Pasien Terbaru</h6>
                   <a href="{{route('pasien.tambah')}}" class="d-none d-sm-inline-block btn btn-primary btn-sm shadow-sm">
                   <i class="fas fa-plus fa-sm"></i> Tambah Pasien</a> 
                 </div>
+                @endif
                 <!-- Card Body -->
                 <div class="card-body">
                   <div class="table-responsive">
@@ -105,14 +107,18 @@
                     <tr>
                       <th>No RM</th>
                       <th>Nama Lengkap</th>
+                      @if(Auth::user()->admin == 1 || Auth::user()->admin == 2 )
                       <th>Tindakan</th>
+                      @endif
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
                       <th>No RM</th>
                       <th>Nama Lengkap</th>
+                      @if(Auth::user()->admin == 1 || Auth::user()->admin == 2 )
                       <th>Tindakan</th>
+                      @endif
                     </tr>
                   </tfoot>
                   <tbody>
@@ -120,6 +126,7 @@
                     <tr>
                       <td>{{str_pad($pasien->id, 4, '0', STR_PAD_LEFT)  }}</td>
                       <td>{{ $pasien->nama }}</td>
+                      @if(Auth::user()->admin == 1 || Auth::user()->admin == 2 )
                       <td>
                         <a href ="{{route('rm.list', $pasien->id) }}" title="Buka RM" class="btn btn-circle btn-sm btn-primary">
                             <i class="fas fa-file"></i>
@@ -128,6 +135,7 @@
                             <i class="fas fa-pen"></i>
                         </a>
                       </td>
+                      @endif
                     </tr>
                   @endforeach
                   </tbody>
@@ -141,11 +149,13 @@
             <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
+                @if(Auth::user()->admin == 1 || Auth::user()->admin == 2 )
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Fasilitas Lab</h6>
                   <a href="{{route('lab.tambah')}}" class="d-none d-sm-inline-block btn btn-primary btn-sm shadow-sm">
                     <i class="fas fa-plus fa-sm"></i> Tambah Lab</a> 
                 </div>
+                @endif
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="table-responsive">
@@ -185,12 +195,14 @@
 
               <!-- Project Card Example -->
               <div class="card shadow mb-4">
+              @if(Auth::user()->admin == 1 || Auth::user()->admin == 2 )
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Kunjungan Terakhir</h6>
                   <a href="{{route('rm.tambah')}}" class="d-none btn-sm d-sm-inline btn btn-primary shadow-sm">
                     <i class="fas fa-plus fa-sm"></i> Tambah Kunjungan</a>
                   </a>
                 </div>
+                @endif
                 <div class="card-body">
                   <div class="table-responsive">
                 <table class="table table-bordered table-striped table-sm" id="rm" width="100%" cellspacing="0">
